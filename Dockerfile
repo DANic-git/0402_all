@@ -208,5 +208,5 @@ EXPOSE 8080
 EXPOSE 5432
 
 CMD ["/opt/bin/entry_point.sh"]
-# HEALTHCHECK --interval=5m --timeout=3s \
-#   CMD curl -f localhost:8080/actuator/health || exit 1
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f localhost:8080/actuator/health || exit 1
